@@ -52,7 +52,7 @@
             line-height: 1.5
         }
 
-        /* ── LOGIN ── */
+        /* LOGIN */
         #login-screen {
             position: fixed;
             inset: 0;
@@ -155,6 +155,42 @@
             letter-spacing: .8px
         }
 
+        .password-wrap {
+            position: relative
+        }
+
+        .password-wrap input {
+            padding-right: 2.75rem
+        }
+
+        .pwd-toggle {
+            position: absolute;
+            right: .75rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: rgba(255, 255, 255, .4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+            transition: color .2s
+        }
+
+        .pwd-toggle:hover {
+            color: rgba(255, 255, 255, .8)
+        }
+
+        .pwd-toggle svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2
+        }
+
         .login-fg input {
             width: 100%;
             padding: .75rem 1rem;
@@ -253,7 +289,7 @@
             color: #fff
         }
 
-        /* ── APP ── */
+        /* APP */
         aside {
             width: 224px;
             background: var(--sidebar);
@@ -860,7 +896,7 @@
             margin-top: .95rem
         }
 
-        /* ── ITEM COMBO ── */
+        /* ITEM COMBO */
         .item-combo-wrap {
             position: relative
         }
@@ -931,7 +967,7 @@
             font-style: italic
         }
 
-        /* ── BULK SALE ── */
+        /* BULK SALE */
         .bulk-row {
             display: grid;
             grid-template-columns: 1fr 90px 36px;
@@ -986,7 +1022,7 @@
             color: var(--accent)
         }
 
-        /* ── ADMIN ── */
+        /* ADMIN */
         .admin-tabs {
             display: flex;
             gap: .5rem;
@@ -1108,7 +1144,7 @@
             display: none !important
         }
 
-        /* ── HISTORY ── */
+        /* HISTORY */
         .hist-item {
             display: flex;
             align-items: center;
@@ -1279,7 +1315,7 @@
             background: var(--bg)
         }
 
-        /* ── STUDENT VIEW (read-only portal) ── */
+        /* STUDENT PORTAL */
         .student-portal {
             max-width: 700px;
             margin: 0 auto
@@ -1314,7 +1350,7 @@
         .portal-stat {
             background: rgba(255, 255, 255, .15);
             border-radius: 10px;
-            padding: .85rem 1rem;
+            padding: .85rem 1rem
         }
 
         .portal-stat-label {
@@ -1330,6 +1366,74 @@
             font-size: 1.4rem;
             font-weight: 800;
             font-family: var(--mono)
+        }
+
+        /* CHANGE PIN */
+        .change-pwd-section {
+            margin-top: 1.25rem
+        }
+
+        .change-pwd-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.4rem;
+            box-shadow: var(--shadow)
+        }
+
+        .pwd-input-wrap {
+            position: relative
+        }
+
+        .pwd-input-wrap input {
+            padding-right: 2.5rem
+        }
+
+        .pwd-eye-btn {
+            position: absolute;
+            right: .65rem;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--muted);
+            padding: .2rem;
+            display: flex;
+            align-items: center
+        }
+
+        .pwd-eye-btn svg {
+            width: 16px;
+            height: 16px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2
+        }
+
+        .pwd-eye-btn:hover {
+            color: var(--ink)
+        }
+
+        /* BALANCE FILTERS */
+        .bal-filter-bar {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1rem 1.3rem;
+            margin-bottom: 1.1rem;
+            box-shadow: var(--shadow)
+        }
+
+        .bal-filter-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr auto auto;
+            gap: .75rem;
+            align-items: end
+        }
+
+        .bal-filter-grid .fg {
+            margin: 0
         }
 
         @keyframes shake {
@@ -1416,6 +1520,68 @@
                 display: none !important
             }
 
+            #ps-header-block {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin-bottom: 1rem;
+                padding-bottom: .75rem;
+                border-bottom: 2.5px solid #1F3864
+            }
+
+            #ps-logo-txt {
+                font-size: 16pt;
+                font-weight: 900;
+                color: #1F3864;
+                font-family: Arial, sans-serif;
+                letter-spacing: -0.3px
+            }
+
+            #ps-meta-txt {
+                font-size: 8.5pt;
+                color: #555;
+                font-family: Arial, sans-serif;
+                margin-top: 3px
+            }
+
+            #ps-date-txt {
+                font-size: 8pt;
+                color: #888;
+                font-family: Arial, sans-serif;
+                text-align: right
+            }
+
+            #ps-stat-row {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 12px;
+                margin-bottom: 1rem
+            }
+
+            .ps-stat-box {
+                border: 1.5px solid #e0e0e0;
+                border-radius: 6px;
+                padding: 8px 12px;
+                background: #f8f9ff
+            }
+
+            .ps-stat-label {
+                font-size: 7.5pt;
+                color: #888;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-family: Arial, sans-serif;
+                font-weight: 700;
+                margin-bottom: 3px
+            }
+
+            .ps-stat-value {
+                font-size: 13pt;
+                font-weight: 900;
+                font-family: 'Courier New', monospace;
+                color: #1F3864
+            }
+
             #ps-table {
                 width: 100%;
                 border-collapse: collapse;
@@ -1429,24 +1595,39 @@
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact;
                 border: 1.5px solid #000;
-                padding: 5px 8px;
+                padding: 6px 8px;
                 text-align: left;
                 font-weight: 700
             }
 
+            #ps-table th.num {
+                text-align: right
+            }
+
             #ps-table td {
-                border: 1px solid #000;
-                padding: 4px 8px
+                border: 1px solid #ccc;
+                padding: 5px 8px
             }
 
             #ps-table tr:nth-child(even) td {
-                background: #dce6f1 !important;
+                background: #eef3fb !important;
                 -webkit-print-color-adjust: exact;
                 print-color-adjust: exact
             }
 
             #ps-table .num {
-                text-align: right
+                text-align: right;
+                font-family: 'Courier New', monospace
+            }
+
+            #ps-table .status-due {
+                color: #C00000;
+                font-weight: 700
+            }
+
+            #ps-table .status-clear {
+                color: #375623;
+                font-weight: 700
             }
 
             #ps-table tfoot td {
@@ -1486,13 +1667,22 @@
                     Login</button>
             </div>
             <form onsubmit="handleLogin(event)">
-                <div class="login-fg" id="lf-user-wrap">
+                <div class="login-fg">
                     <label id="lf-user-label">Username</label>
                     <input type="text" id="l-user" placeholder="Enter your username" autocomplete="off" required>
                 </div>
                 <div class="login-fg">
-                    <label id="lf-pass-label">Password</label>
-                    <input type="password" id="l-pass" placeholder="Enter your password" required>
+                    <label id="lf-pass-label">Password / PIN</label>
+                    <div class="password-wrap">
+                        <input type="password" id="l-pass" placeholder="Enter your password" required
+                            autocomplete="new-password">
+                        <button type="button" class="pwd-toggle" onclick="toggleLoginPwd()" tabindex="-1">
+                            <svg id="pwd-eye-icon" viewBox="0 0 24 24">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                        </button>
+                    </div>
                 </div>
                 <button type="submit" class="login-btn" id="btn-login">Sign In →</button>
                 <div class="login-err" id="l-err"></div>
@@ -1509,7 +1699,7 @@
             <div class="brand-name">Stationery Pro</div>
         </div>
         <nav id="app-nav">
-            <button class="nb on" onclick="nav('dashboard',this)">
+            <button class="nb on staff-only" onclick="nav('dashboard',this)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                     <rect x="3" y="3" width="7" height="7" rx="1" />
                     <rect x="14" y="3" width="7" height="7" rx="1" />
@@ -1564,13 +1754,28 @@
                 </svg>
                 Admin Panel
             </button>
-            <!-- Student portal nav -->
-            <button class="nb hidden student-only" onclick="nav('portal',this)">
+            <!-- Staff Change PIN -->
+            <button class="nb staff-only" onclick="nav('changepin',this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                Change PIN
+            </button>
+            <!-- Student nav -->
+            <button class="nb hidden student-only on" onclick="nav('portal',this)">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
                     <circle cx="12" cy="8" r="4" />
                     <path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" />
                 </svg>
                 My Account
+            </button>
+            <button class="nb hidden student-only" onclick="nav('changepin',this)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                </svg>
+                Change PIN
             </button>
         </nav>
     </aside>
@@ -1583,8 +1788,8 @@
             </div>
         </div>
 
-        <!-- DASHBOARD (staff) -->
-        <div id="view-dashboard" class="view">
+        <!-- STAFF DASHBOARD -->
+        <div id="view-dashboard" class="view hidden">
             <div class="ph">
                 <h1>Dashboard</h1>
                 <p>This month's stationery operations at a glance.</p>
@@ -1598,17 +1803,121 @@
                     <div class="sl">Total Collected</div>
                     <div class="sv g" id="d-collected">₹0</div>
                 </div>
+                <div class="sc">
+                    <div class="sl">Total Balance Due</div>
+                    <div class="sv r" id="d-balance-due">₹0</div>
+                </div>
+                <div class="sc">
+                    <div class="sl">Total Students</div>
+                    <div class="sv" id="d-students">0</div>
+                </div>
             </div>
-            <div class="card">
-                <div class="ct">Quick Actions</div>
-                <div class="fg-row">
-                    <button class="btn bp" style="width:auto"
-                        onclick="nav('sale',document.querySelectorAll('.nb')[1])">+ New Sale</button>
-                    <button class="btn bx" onclick="nav('payment',document.querySelectorAll('.nb')[2])">Add
-                        Payment</button>
-                    <button class="btn bx" onclick="nav('balance',document.querySelectorAll('.nb')[3])">Balance
-                        Sheet</button>
-                    <button class="btn bx" onclick="nav('history',null)">History / Undo</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- STUDENT PORTAL (replaces dashboard for students) -->
+        <div id="view-portal" class="view hidden">
+            <div class="student-portal">
+                <div class="portal-header">
+                    <div class="portal-name" id="portal-name">—</div>
+                    <div class="portal-meta" id="portal-meta">—</div>
+                    <div class="portal-stats">
+                        <div class="portal-stat">
+                            <div class="portal-stat-label">Total Billed</div>
+                            <div class="portal-stat-val" id="portal-billed">₹0</div>
+                        </div>
+                        <div class="portal-stat">
+                            <div class="portal-stat-label">Total Paid</div>
+                            <div class="portal-stat-val" id="portal-paid">₹0</div>
+                        </div>
+                        <div class="portal-stat">
+                            <div class="portal-stat-label">Balance Due</div>
+                            <div class="portal-stat-val" id="portal-balance">₹0</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="ct">Purchase History</div>
+                    <div class="tw mh">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Item</th>
+                                    <th class="tr">Qty</th>
+                                    <th class="tr">Amount</th>
+                                </tr>
+                            </thead>
+                            <tbody id="portal-hist">
+                                <tr>
+                                    <td colspan="4" style="text-align:center;color:var(--muted);padding:2rem">Loading…
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CHANGE PIN (shared for staff & student) -->
+        <div id="view-changepin" class="view hidden">
+            <div class="ph">
+                <h1>Change PIN</h1>
+                <p id="changepin-sub">Update your login PIN / password.</p>
+            </div>
+            <div style="max-width:520px">
+                <div class="card">
+                    <div class="ct">Update  PIN</div>
+                    <div class="fg">
+                        <label>Current PIN</label>
+                        <div class="pwd-input-wrap">
+                            <input type="number" id="cp-current" placeholder="Current pin"
+                                autocomplete="new-pin">
+                            <button type="button" class="pwd-eye-btn" onclick="toggleFieldPwd('cp-current',this)"
+                                tabindex="-1">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fg" id="cp-new-wrap">
+                        <label id="cp-new-label">New PIN (6 digits for students / any for staff)</label>
+                        <div class="pwd-input-wrap">
+                            <input type="number" id="cp-new" placeholder="New PIN"
+                                autocomplete="new-password">
+                            <button type="button" class="pwd-eye-btn" onclick="toggleFieldPwd('cp-new',this)"
+                                tabindex="-1">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="fg">
+                        <label>Confirm New Password / PIN</label>
+                        <div class="pwd-input-wrap">
+                            <input type="password" id="cp-confirm" placeholder="Repeat new password/PIN"
+                                autocomplete="new-password">
+                            <button type="button" class="pwd-eye-btn" onclick="toggleFieldPwd('cp-confirm',this)"
+                                tabindex="-1">
+                                <svg viewBox="0 0 24 24">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                                    <circle cx="12" cy="12" r="3" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div style="display:flex;align-items:center;gap:.85rem;margin-top:.5rem">
+                        <button class="btn bp" style="width:auto;min-width:160px" onclick="changePIN()">Update Password
+                            / PIN</button>
+                        <span id="cp-msg" style="font-size:.82rem;font-weight:600"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1702,12 +2011,44 @@
             <div class="fb ph" style="align-items:flex-start">
                 <div>
                     <h1>Balance Sheet</h1>
-                    <p>All classes load in parallel.</p>
+                    <p>Filter by date range and class.</p>
                 </div>
                 <div class="fg-row no-print">
                     <button class="btn bx" onclick="loadAllBalances()">Refresh</button>
                     <button class="btn bxl" onclick="exportBalanceExcel()">📊 Export Excel</button>
                     <button class="btn bp" style="width:auto" onclick="window.print()">Print / PDF</button>
+                </div>
+            </div>
+            <div class="bal-filter-bar no-print">
+                <div class="bal-filter-grid">
+                    <div class="fg"><label>Class</label>
+                        <select id="bal-cls-filter">
+                            <option value="All">All Classes</option>
+                            <option>S1</option>
+                            <option>S2</option>
+                            <option>S3</option>
+                            <option>S4</option>
+                            <option>S5</option>
+                            <option>SS1</option>
+                            <option>SS2</option>
+                            <option>D1</option>
+                            <option>D2</option>
+                            <option>D3</option>
+                        </select>
+                    </div>
+                    <div class="fg"><label>From Date</label><input type="date" id="bal-from"></div>
+                    <div class="fg"><label>To Date</label><input type="date" id="bal-to"></div>
+                    <div class="fg"><label>Status</label>
+                        <select id="bal-status-filter">
+                            <option value="All">All</option>
+                            <option value="Due">Due Only</option>
+                            <option value="Cleared">Cleared Only</option>
+                        </select>
+                    </div>
+                    <div style="display:flex;gap:.5rem;align-items:flex-end">
+                        <button class="btn bp" style="width:auto" onclick="applyBalanceFilter()">Apply</button>
+                        <button class="btn bx" onclick="clearBalanceFilter()">Clear</button>
+                    </div>
                 </div>
             </div>
             <div class="sg" style="margin-bottom:1.25rem">
@@ -1732,7 +2073,8 @@
             </div>
             <div id="bal-sections">
                 <div class="card" style="text-align:center;padding:2.5rem;color:var(--muted)">Click
-                    <strong>Refresh</strong> to load all classes.</div>
+                    <strong>Refresh</strong> to load all classes.
+                </div>
             </div>
         </div>
 
@@ -1746,7 +2088,7 @@
                 <div class="fg-row no-print">
                     <button class="btn bx" onclick="exportSummaryCSV()">Export CSV</button>
                     <button class="btn bxl" onclick="exportSummaryExcel()">📊 Export Excel (Class-wise)</button>
-                    <button class="btn bx" onclick="printSummary()">Print</button>
+                    <button class="btn bx" onclick="printSummary()">🖨 Print</button>
                 </div>
             </div>
             <div class="card no-print" style="padding:1.1rem 1.3rem;margin-bottom:1.1rem">
@@ -1803,29 +2145,48 @@
                 </table>
             </div>
             <div id="print-summary-area">
-                <div style="margin-bottom:.75rem">
-                    <div style="font-size:13pt;font-weight:800;font-family:Arial,sans-serif">Student Summary</div>
-                    <div id="ps-title" style="font-size:9pt;color:#555;font-family:Arial,sans-serif;margin-top:2px">
+                <div id="ps-header-block">
+                    <div>
+                        <div id="ps-logo-txt">📚 Stationery Pro — Union System</div>
+                        <div id="ps-meta-txt"></div>
+                    </div>
+                    <div id="ps-date-txt"></div>
+                </div>
+                <div id="ps-stat-row">
+                    <div class="ps-stat-box">
+                        <div class="ps-stat-label">Students</div>
+                        <div class="ps-stat-value" id="ps-stat-count">0</div>
+                    </div>
+                    <div class="ps-stat-box">
+                        <div class="ps-stat-label">Total Billed</div>
+                        <div class="ps-stat-value" id="ps-stat-total">₹0.00</div>
+                    </div>
+                    <div class="ps-stat-box">
+                        <div class="ps-stat-label">Average / Student</div>
+                        <div class="ps-stat-value" id="ps-stat-avg">₹0.00</div>
                     </div>
                 </div>
                 <table id="ps-table">
                     <thead>
                         <tr>
-                            <th style="width:70px">#</th>
-                            <th style="width:90px">ID</th>
+                            <th style="width:45px">#</th>
+                            <th style="width:80px">ID</th>
                             <th>Name</th>
-                            <th>Class</th>
-                            <th class="num" style="width:100px">Amount (₹)</th>
+                            <th style="width:70px">Class</th>
+                            <th class="num" style="width:110px">Amount (₹)</th>
                         </tr>
                     </thead>
                     <tbody id="ps-rows"></tbody>
                     <tfoot>
                         <tr>
-                            <td colspan="4" style="text-align:right;padding-right:8px">Grand Total</td>
+                            <td colspan="4" style="text-align:right;padding-right:8px;font-weight:700">Grand Total</td>
                             <td class="num" id="ps-grand"></td>
                         </tr>
                     </tfoot>
                 </table>
+                <div
+                    style="margin-top:1.5rem;font-size:8pt;color:#aaa;font-family:Arial,sans-serif;border-top:1px solid #eee;padding-top:.5rem">
+                    Generated by Stationery Pro · School Union Management System</div>
             </div>
         </div>
 
@@ -1863,7 +2224,8 @@
                             <input type="text" id="as-id" placeholder="Student ID">
                             <input type="text" id="as-name" placeholder="Name">
                         </div>
-                        <div style="margin-bottom:.75rem"><select id="as-cls">
+                        <div style="margin-bottom:.75rem">
+                            <select id="as-cls">
                                 <option value="">Select class…</option>
                                 <option>S1</option>
                                 <option>S2</option>
@@ -1875,7 +2237,8 @@
                                 <option>D1</option>
                                 <option>D2</option>
                                 <option>D3</option>
-                            </select></div>
+                            </select>
+                        </div>
                         <div style="display:flex;gap:.5rem">
                             <button class="btn bp" onclick="adminSaveStudent()" style="flex:1">Save / Update</button>
                             <button class="btn br" onclick="adminDeleteStudent()"
@@ -1905,87 +2268,74 @@
                 <div style="text-align:center;padding:2rem;color:var(--muted)">Loading…</div>
             </div>
         </div>
-
-        <!-- STUDENT PORTAL (read-only) -->
-        <div id="view-portal" class="view hidden">
-            <div class="student-portal">
-                <div class="portal-header">
-                    <div class="portal-name" id="portal-name">—</div>
-                    <div class="portal-meta" id="portal-meta">—</div>
-                    <div class="portal-stats">
-                        <div class="portal-stat">
-                            <div class="portal-stat-label">Total Billed</div>
-                            <div class="portal-stat-val" id="portal-billed">₹0</div>
-                        </div>
-                        <div class="portal-stat">
-                            <div class="portal-stat-label">Total Paid</div>
-                            <div class="portal-stat-val" id="portal-paid">₹0</div>
-                        </div>
-                        <div class="portal-stat">
-                            <div class="portal-stat-label">Balance Due</div>
-                            <div class="portal-stat-val" id="portal-balance">₹0</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="ct">Purchase History</div>
-                    <div class="tw mh">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Item</th>
-                                    <th class="tr">Qty</th>
-                                    <th class="tr">Amount</th>
-                                </tr>
-                            </thead>
-                            <tbody id="portal-hist">
-                                <tr>
-                                    <td colspan="4" style="text-align:center;color:var(--muted);padding:2rem">Loading…
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <div id="toasts"></div>
 
     <script>
-        const API = 'https://script.google.com/macros/s/AKfycbzGDNT1TiiaT_b8yGmu3IdNKk_zETSwZsff6OiNfcKFILZGfwQBbCYq4SxdipoKJ1Q8Vg/exec';
+        const API = 'https://script.google.com/macros/s/AKfycbx_BuyFROk62MZcMrfiEB9fhgxPnnGLp-AYX0LivgK-jSld7tUiTyNXLWKppphAlb2EQw/exec';
         const CLASSES = ['S1', 'S2', 'S3', 'S4', 'S5', 'SS1', 'SS2', 'D1', 'D2', 'D3'];
-        const STAFF_USERS = { 'ahsan': 'ahsanstationary', 'admin': 'adminediting' };
+
+        // Staff users — passwords loaded from sheet (fallback hardcoded)
+        let STAFF_USERS = { 'ahsan': 'ahsanstationary', 'admin': 'adminediting' };
 
         let students = [], items = [], summaryAllRows = [], balanceAllData = [];
         let payStu = null, payBal = 0, saleStu = null, currentUser = null, currentRole = null;
         let loginMode = 'staff';
+
+        // ── PASSWORD STORAGE ──────────────────────────────────────────────────────────
+        // Student PINs: stored locally + synced to sheet
+        // Staff PINs: stored in sheet only
+        function getStudentPwd(sid) {
+            try {
+                const all = JSON.parse(localStorage.getItem('sp_pwds') || '{}');
+                return all[String(sid)] || String(sid).padStart(6, '0');
+            } catch { return String(sid).padStart(6, '0'); }
+        }
+        function setStudentPwdLocal(sid, newPwd) {
+            try {
+                const all = JSON.parse(localStorage.getItem('sp_pwds') || '{}');
+                all[String(sid)] = newPwd;
+                localStorage.setItem('sp_pwds', JSON.stringify(all));
+            } catch { }
+        }
 
         // ── LOGIN MODE TOGGLE ─────────────────────────────────────────────────────────
         function setLoginMode(mode) {
             loginMode = mode;
             document.getElementById('mode-staff').classList.toggle('on', mode === 'staff');
             document.getElementById('mode-student').classList.toggle('on', mode === 'student');
-            const ul = document.getElementById('lf-user-label');
-            const pl = document.getElementById('lf-pass-label');
             const ui = document.getElementById('l-user');
-            const pi = document.getElementById('l-pass');
             if (mode === 'student') {
-                ul.textContent = 'Student ID';
-                pl.textContent = 'Password (6 digits)';
+                document.getElementById('lf-user-label').textContent = 'Student ID';
+                document.getElementById('lf-pass-label').textContent = 'PIN (6 digits)';
                 ui.placeholder = 'e.g. 1066';
-                pi.placeholder = '6-digit code';
-                document.getElementById('login-hint-txt').textContent = 'Student ID → 6-digit password (e.g. ID 1066 → 001066)';
+                document.getElementById('login-hint-txt').textContent = '';
             } else {
-                ul.textContent = 'Username';
-                pl.textContent = 'Password';
+                document.getElementById('lf-user-label').textContent = 'Username';
+                document.getElementById('lf-pass-label').textContent = 'Password';
                 ui.placeholder = 'Enter your username';
-                pi.placeholder = 'Enter your password';
-                document.getElementById('login-hint-txt').textContent = 'Secure access · School Union Stationery';
+                document.getElementById('login-hint-txt').textContent = 'Devoleped by Hashim Kp';
             }
             document.getElementById('l-err').textContent = '';
+        }
+
+        function toggleLoginPwd() {
+            const inp = document.getElementById('l-pass');
+            const isHidden = inp.type === 'password';
+            inp.type = isHidden ? 'text' : 'password';
+            document.getElementById('pwd-eye-icon').innerHTML = isHidden
+                ? '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>'
+                : '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
+        }
+
+        function toggleFieldPwd(fieldId, btn) {
+            const inp = document.getElementById(fieldId);
+            const isHidden = inp.type === 'password';
+            inp.type = isHidden ? 'text' : 'password';
+            btn.querySelector('svg').innerHTML = isHidden
+                ? '<path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/>'
+                : '<path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>';
         }
 
         // ── AUTH ──────────────────────────────────────────────────────────────────────
@@ -2000,7 +2350,7 @@
             } catch (_) { }
         }
 
-        function handleLogin(e) {
+        async function handleLogin(e) {
             e.preventDefault();
             const u = document.getElementById('l-user').value.trim();
             const p = document.getElementById('l-pass').value.trim();
@@ -2010,53 +2360,96 @@
 
             if (loginMode === 'staff') {
                 const ul = u.toLowerCase();
-                if (STAFF_USERS[ul] !== undefined && STAFF_USERS[ul] === p) {
+                // Try local first, then fetch from sheet
+                let validPwd = STAFF_USERS[ul];
+                // If not in local cache, try loading from API
+                if (validPwd === undefined) {
+                    err.textContent = 'Unknown username.';
+                    shakeLogin();
+                    document.getElementById('l-pass').value = '';
+                    return;
+                }
+                if (validPwd === p) {
                     btn.textContent = 'Loading…'; btn.disabled = true;
-                    setTimeout(() => {
+                    try {
+                        // Load staff passwords from sheet to sync
+                        const r = await apiFetch({ action: 'getStaffPasswords' });
+                        if (r && r.passwords) {
+                            Object.assign(STAFF_USERS, r.passwords);
+                            // Re-check with sheet password
+                            if (STAFF_USERS[ul] && STAFF_USERS[ul] !== p) {
+                                err.textContent = 'Password incorrect (updated in sheet).';
+                                shakeLogin();
+                                document.getElementById('l-pass').value = '';
+                                btn.textContent = 'Sign In →'; btn.disabled = false;
+                                return;
+                            }
+                        }
+                    } catch (_) { /* use local */ }
+                    const sess = { user: ul, role: 'staff', displayName: ul.charAt(0).toUpperCase() + ul.slice(1) };
+                    sessionStorage.setItem('sp_session', JSON.stringify(sess));
+                    document.getElementById('l-pass').value = '';
+                    showApp(sess);
+                } else {
+                    // Also try fetching sheet passwords in case local is outdated
+                    btn.textContent = 'Checking…'; btn.disabled = true;
+                    try {
+                        const r = await apiFetch({ action: 'getStaffPasswords' });
+                        if (r && r.passwords) Object.assign(STAFF_USERS, r.passwords);
+                    } catch (_) { }
+                    btn.textContent = 'Sign In →'; btn.disabled = false;
+                    if (STAFF_USERS[ul] === p) {
                         const sess = { user: ul, role: 'staff', displayName: ul.charAt(0).toUpperCase() + ul.slice(1) };
                         sessionStorage.setItem('sp_session', JSON.stringify(sess));
+                        document.getElementById('l-pass').value = '';
                         showApp(sess);
-                    }, 400);
-                } else {
+                        return;
+                    }
                     shakeLogin();
-                    err.textContent = 'Invalid username or password.';
+                    err.textContent = 'Wrong password.';
                     document.getElementById('l-pass').value = '';
                 }
             } else {
-                // Student login: password = zero-padded 6-digit ID
+                // Student login
                 const sid = u.trim();
-                const expectedPwd = sid.padStart(6, '0');
-                if (p === expectedPwd) {
-                    btn.textContent = 'Loading…'; btn.disabled = true;
-                    // Find student from cached data, then load
-                    const doStudentLogin = () => {
-                        const stu = students.find(x => String(x.id).trim() === sid);
-                        if (!stu) {
-                            err.textContent = 'Student ID not found. Contact admin.';
-                            btn.textContent = 'Sign In →'; btn.disabled = false;
-                            return;
-                        }
-                        const sess = { user: sid, role: 'student', displayName: stu.name, studentData: stu };
-                        sessionStorage.setItem('sp_session', JSON.stringify(sess));
-                        showApp(sess);
-                    };
-                    if (students.length) {
-                        doStudentLogin();
-                    } else {
-                        // Load students first
-                        apiFetch({ action: 'init' }).then(r => {
-                            students = r.students || [];
-                            items = r.items || [];
-                            doStudentLogin();
-                        }).catch(() => {
-                            err.textContent = 'Connection failed. Try again.';
-                            btn.textContent = 'Sign In →'; btn.disabled = false;
-                        });
+                btn.textContent = 'Loading…'; btn.disabled = true;
+                document.getElementById('l-pass').value = '';
+
+                try {
+                    // Load students if not cached
+                    if (!students.length) {
+                        const r = await apiFetch({ action: 'init' });
+                        students = r.students || [];
+                        items = r.items || [];
                     }
-                } else {
-                    shakeLogin();
-                    err.textContent = 'Wrong password. Use your 6-digit ID (e.g. ID 1066 → 001066).';
-                    document.getElementById('l-pass').value = '';
+                    const stu = students.find(x => String(x.id).trim() === sid);
+                    if (!stu) {
+                        err.textContent = 'Student ID not found. Contact admin.';
+                        btn.textContent = 'Sign In →'; btn.disabled = false;
+                        return;
+                    }
+                    // Fetch PIN from sheet
+                    let expectedPwd = getStudentPwd(sid);
+                    try {
+                        const pr = await apiFetch({ action: 'getStudentPin', studentId: sid });
+                        if (pr && pr.pin) {
+                            expectedPwd = pr.pin;
+                            setStudentPwdLocal(sid, pr.pin);
+                        }
+                    } catch (_) { }
+
+                    if (p !== expectedPwd) {
+                        shakeLogin();
+                        err.textContent = 'Wrong PIN. Default is your ID zero-padded to 6 digits (e.g. 1066 → 001066).';
+                        btn.textContent = 'Sign In →'; btn.disabled = false;
+                        return;
+                    }
+                    const sess = { user: sid, role: 'student', displayName: stu.name, studentData: stu };
+                    sessionStorage.setItem('sp_session', JSON.stringify(sess));
+                    showApp(sess);
+                } catch (ex) {
+                    err.textContent = 'Connection failed. Try again.';
+                    btn.textContent = 'Sign In →'; btn.disabled = false;
                 }
             }
         }
@@ -2070,12 +2463,14 @@
             if (sess.role === 'student') {
                 document.querySelectorAll('.staff-only').forEach(el => el.classList.add('hidden'));
                 document.querySelectorAll('.student-only').forEach(el => el.classList.remove('hidden'));
+                // Show student portal (My Account) as default
                 nav('portal', document.querySelector('.student-only'));
                 loadStudentPortal(sess.studentData || { id: sess.user });
             } else {
                 document.querySelectorAll('.staff-only').forEach(el => el.classList.remove('hidden'));
                 document.querySelectorAll('.student-only').forEach(el => el.classList.add('hidden'));
-                nav('dashboard', document.querySelector('.nb.on') || document.querySelectorAll('.nb')[0]);
+                const firstNav = document.querySelector('.nb.staff-only');
+                nav('dashboard', firstNav);
                 boot();
             }
         }
@@ -2086,6 +2481,106 @@
         }
 
         function logout() { sessionStorage.removeItem('sp_session'); location.reload(); }
+
+        // ── CHANGE PIN (shared for staff + student) ───────────────────────────────────
+        function nav(name, btn) {
+            document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
+            document.getElementById('view-' + name).classList.remove('hidden');
+            document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
+            if (btn) btn.classList.add('on');
+
+            if (name === 'dashboard') updateDashboard();
+            if (name === 'balance') loadAllBalances();
+            if (name === 'sale') resetBulkSale();
+            if (name === 'history') loadHistory();
+            if (name === 'admin') { renderAdminItems(); renderAdminStudents(); }
+            if (name === 'changepin') setupChangePinView();
+
+            // Clear pin fields on nav
+            ['cp-current', 'cp-new', 'cp-confirm'].forEach(id => { const el = document.getElementById(id); if (el) el.value = ''; });
+            const msg = document.getElementById('cp-msg'); if (msg) msg.textContent = '';
+        }
+
+        function setupChangePinView() {
+            const sess = JSON.parse(sessionStorage.getItem('sp_session') || '{}');
+            const lbl = document.getElementById('cp-new-label');
+            const sub = document.getElementById('changepin-sub');
+            if (sess.role === 'student') {
+                if (lbl) lbl.textContent = 'New PIN (must be exactly 6 digits)';
+                if (sub) sub.textContent = 'Change your student login PIN. PIN must be 6 digits.';
+            } else {
+                if (lbl) lbl.textContent = 'New Password (any length)';
+                if (sub) sub.textContent = 'Change your staff login password. Saved to the sheet.';
+            }
+        }
+
+        async function changePIN() {
+            const sess = JSON.parse(sessionStorage.getItem('sp_session') || '{}');
+            const cur = document.getElementById('cp-current').value;
+            const nw = document.getElementById('cp-new').value;
+            const conf = document.getElementById('cp-confirm').value;
+            const msg = document.getElementById('cp-msg');
+
+            if (!cur || !nw || !conf) {
+                msg.style.color = 'var(--red)'; msg.textContent = '✕ Fill all fields.'; return;
+            }
+            if (nw !== conf) {
+                msg.style.color = 'var(--red)'; msg.textContent = '✕ Passwords do not match.';
+                document.getElementById('cp-confirm').value = ''; return;
+            }
+
+            if (sess.role === 'student') {
+                const sid = sess.user;
+                let expectedPwd = getStudentPwd(sid);
+                try {
+                    const pr = await apiFetch({ action: 'getStudentPin', studentId: sid });
+                    if (pr && pr.pin) expectedPwd = pr.pin;
+                } catch (_) { }
+                if (cur !== expectedPwd) {
+                    msg.style.color = 'var(--red)'; msg.textContent = '✕ Current PIN is incorrect.';
+                    document.getElementById('cp-current').value = ''; return;
+                }
+                if (!/^\d{6}$/.test(nw)) {
+                    msg.style.color = 'var(--red)'; msg.textContent = '✕ New PIN must be exactly 6 digits.'; return;
+                }
+                try {
+                    await apiFetch({ action: 'saveStudentPin', studentId: sid, pin: nw });
+                    setStudentPwdLocal(sid, nw);
+                    // Update session if needed
+                    msg.style.color = 'var(--green)'; msg.textContent = '✓ PIN changed successfully!';
+                    document.getElementById('cp-current').value = '';
+                    document.getElementById('cp-new').value = '';
+                    document.getElementById('cp-confirm').value = '';
+                    toast('PIN updated', 'ok');
+                    setTimeout(() => { msg.textContent = ''; }, 4000);
+                } catch (e) { msg.style.color = 'var(--red)'; msg.textContent = '✕ Failed to save PIN: ' + e.message; }
+            } else {
+                // Staff
+                const ul = sess.user;
+                let expectedPwd = STAFF_USERS[ul] || '';
+                try {
+                    const r = await apiFetch({ action: 'getStaffPasswords' });
+                    if (r && r.passwords && r.passwords[ul]) expectedPwd = r.passwords[ul];
+                } catch (_) { }
+                if (cur !== expectedPwd) {
+                    msg.style.color = 'var(--red)'; msg.textContent = '✕ Current password is incorrect.';
+                    document.getElementById('cp-current').value = ''; return;
+                }
+                try {
+                    await apiFetch({ action: 'saveStaffPassword', username: ul, password: nw });
+                    STAFF_USERS[ul] = nw;
+                    // Update session
+                    const s = JSON.parse(sessionStorage.getItem('sp_session') || '{}');
+                    sessionStorage.setItem('sp_session', JSON.stringify(s));
+                    msg.style.color = 'var(--green)'; msg.textContent = '✓ Password changed successfully!';
+                    document.getElementById('cp-current').value = '';
+                    document.getElementById('cp-new').value = '';
+                    document.getElementById('cp-confirm').value = '';
+                    toast('Password updated', 'ok');
+                    setTimeout(() => { msg.textContent = ''; }, 4000);
+                } catch (e) { msg.style.color = 'var(--red)'; msg.textContent = '✕ Failed: ' + e.message; }
+            }
+        }
 
         // ── HELPERS ───────────────────────────────────────────────────────────────────
         const debounce = (fn, d) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => fn(...a), d); }; };
@@ -2188,96 +2683,72 @@
                     addBulkRow();
                     updateDashboard();
                 } catch (_) { }
-            } else {
-                addBulkRow();
-            }
+            } else { addBulkRow(); }
 
-            // Parallel: fetch init + stats
             try {
-                const [r] = await Promise.all([
-                    apiFetch({ action: 'init' }),
-                ]);
+                const [r] = await Promise.all([apiFetch({ action: 'init' })]);
                 students = r.students || [];
                 items = r.items || [];
                 localStorage.setItem('sp_init', JSON.stringify({ students, items, ts: Date.now() }));
-                fillBulkSelects();
                 updateDashboard();
             } catch (e) {
                 if (!cached) toast('Connection failed — check API URL', 'er');
             }
         }
 
-        // ── NAV ───────────────────────────────────────────────────────────────────────
-        function nav(name, btn) {
-            document.querySelectorAll('.view').forEach(v => v.classList.add('hidden'));
-            document.getElementById('view-' + name).classList.remove('hidden');
-            document.querySelectorAll('.nb').forEach(b => b.classList.remove('on'));
-            if (btn) btn.classList.add('on');
-            if (name === 'dashboard') updateDashboard();
-            if (name === 'balance') loadAllBalances();
-            if (name === 'sale') resetBulkSale();
-            if (name === 'history') loadHistory();
-            if (name === 'admin') { renderAdminItems(); renderAdminStudents(); }
-        }
-
         // ── DASHBOARD ─────────────────────────────────────────────────────────────────
         async function updateDashboard() {
             try {
                 const r = await apiFetch({ action: 'getStats' });
-                document.getElementById('d-income').textContent = '₹' + (r.income || 0).toLocaleString('en-IN');
-                document.getElementById('d-collected').textContent = '₹' + (r.collected || 0).toLocaleString('en-IN');
+                const income = r.income || 0;
+                const collected = r.collected || 0;
+                const balance = Math.max(0, income - collected);
+                const rate = income > 0 ? Math.round(collected / income * 100) : 0;
+                document.getElementById('d-income').textContent = '₹' + income.toLocaleString('en-IN');
+                document.getElementById('d-collected').textContent = '₹' + collected.toLocaleString('en-IN');
+                document.getElementById('d-balance-due').textContent = '₹' + balance.toLocaleString('en-IN');
+                document.getElementById('d-students').textContent = students.length || '—';
+                document.getElementById('d-coll-rate').textContent = rate + '%';
+                document.getElementById('d-coll-bar').style.width = rate + '%';
+                document.getElementById('d-pending').textContent = '₹' + balance.toLocaleString('en-IN');
             } catch (_) { }
         }
 
-        // ── ITEM COMBO (type + dropdown) ─────────────────────────────────────────────
+        // ── ITEM COMBO ────────────────────────────────────────────────────────────────
         function createItemCombo() {
             const wrap = document.createElement('div');
             wrap.className = 'item-combo-wrap';
-
             const inp = document.createElement('input');
-            inp.type = 'text';
-            inp.className = 'item-combo-input';
-            inp.placeholder = 'Type item name…';
-            inp.autocomplete = 'off';
-
+            inp.type = 'text'; inp.className = 'item-combo-input'; inp.placeholder = 'Type item name…'; inp.autocomplete = 'off';
             const drop = document.createElement('div');
             drop.className = 'item-dropdown';
-
-            let selectedItem = null;
             let focusIdx = -1;
-
             function renderOptions(query) {
                 const q = query.trim().toLowerCase();
                 const filtered = q ? items.filter(it => it.name.toLowerCase().includes(q)) : items;
                 if (!filtered.length) {
                     drop.innerHTML = `<div class="item-opt-empty">No items found</div>`;
                 } else {
-                    drop.innerHTML = filtered.map((it, i) =>
+                    drop.innerHTML = filtered.map(it =>
                         `<div class="item-opt" data-idx="${items.indexOf(it)}" data-name="${it.name}" data-price="${it.price}">
-                    <span>${it.name}</span>
-                    <span class="item-opt-price">₹${(+it.price).toFixed(2)}</span>
-                </div>`
+                        <span>${it.name}</span>
+                        <span class="item-opt-price">₹${(+it.price).toFixed(2)}</span>
+                    </div>`
                     ).join('');
                     drop.querySelectorAll('.item-opt').forEach(opt => {
-                        opt.addEventListener('mousedown', e => {
-                            e.preventDefault();
-                            selectItem(opt);
-                        });
+                        opt.addEventListener('mousedown', e => { e.preventDefault(); selectItem(opt); });
                     });
                 }
-                focusIdx = -1;
-                drop.classList.add('open');
+                focusIdx = -1; drop.classList.add('open');
             }
-
             function selectItem(opt) {
-                selectedItem = { name: opt.dataset.name, price: +opt.dataset.price, idx: +opt.dataset.idx };
+                const si = { name: opt.dataset.name, price: +opt.dataset.price, idx: +opt.dataset.idx };
                 inp.value = `${opt.dataset.name} — ₹${(+opt.dataset.price).toFixed(2)}`;
                 drop.classList.remove('open');
-                wrap._selectedItem = selectedItem;
+                wrap._selectedItem = si;
                 wrap.dispatchEvent(new Event('item-selected'));
             }
-
-            inp.addEventListener('input', () => { selectedItem = null; wrap._selectedItem = null; renderOptions(inp.value); wrap.dispatchEvent(new Event('item-selected')); });
+            inp.addEventListener('input', () => { wrap._selectedItem = null; renderOptions(inp.value); wrap.dispatchEvent(new Event('item-selected')); });
             inp.addEventListener('focus', () => renderOptions(inp.value));
             inp.addEventListener('blur', () => setTimeout(() => drop.classList.remove('open'), 150));
             inp.addEventListener('keydown', e => {
@@ -2287,11 +2758,9 @@
                 else if (e.key === 'Enter' && focusIdx >= 0 && opts[focusIdx]) { selectItem(opts[focusIdx]); e.preventDefault(); }
                 else if (e.key === 'Escape') drop.classList.remove('open');
             });
-
-            wrap.appendChild(inp);
-            wrap.appendChild(drop);
+            wrap.appendChild(inp); wrap.appendChild(drop);
             wrap.getSelectedItem = () => wrap._selectedItem || null;
-            wrap.clear = () => { inp.value = ''; wrap._selectedItem = null; selectedItem = null; };
+            wrap.clear = () => { inp.value = ''; wrap._selectedItem = null; };
             return wrap;
         }
 
@@ -2302,12 +2771,7 @@
             document.getElementById('s-autofill').classList.add('hidden');
             document.getElementById('bulk-rows').innerHTML = '';
             document.getElementById('btn-sale').disabled = true;
-            addBulkRow();
-            calcBulkTotal();
-        }
-
-        function fillBulkSelects() {
-            // Combo boxes auto-filter from items array — no explicit refresh needed
+            addBulkRow(); calcBulkTotal();
         }
 
         function addBulkRow(auto = false) {
@@ -2315,24 +2779,20 @@
             const isFirst = container.children.length === 0;
             const row = document.createElement('div');
             row.className = 'bulk-row';
-
             const combo = createItemCombo();
             const qtyInput = document.createElement('input');
             qtyInput.type = 'number'; qtyInput.value = '1'; qtyInput.min = '1';
             qtyInput.style.textAlign = 'center'; qtyInput.style.margin = '0';
             qtyInput.addEventListener('input', calcBulkTotal);
-
             const rmBtn = document.createElement('button');
             rmBtn.className = 'rm-btn'; rmBtn.textContent = '×';
             if (isFirst) rmBtn.disabled = true;
             rmBtn.addEventListener('click', () => { if (!isFirst) { row.remove(); calcBulkTotal(); } });
-
             combo.addEventListener('item-selected', () => {
                 calcBulkTotal();
                 const rows = document.getElementById('bulk-rows').children;
                 if (combo.getSelectedItem() && row === rows[rows.length - 1]) addBulkRow(true);
             });
-
             row.appendChild(combo); row.appendChild(qtyInput); row.appendChild(rmBtn);
             container.appendChild(row);
             if (!isFirst && auto) combo.querySelector('input').focus();
@@ -2340,8 +2800,7 @@
 
         function calcBulkTotal() {
             const rows = document.getElementById('bulk-rows').children;
-            let grand = 0;
-            const lines = [];
+            let grand = 0; const lines = [];
             for (const row of rows) {
                 const combo = row.querySelector('.item-combo-wrap');
                 const item = combo ? combo.getSelectedItem() : null;
@@ -2379,8 +2838,7 @@
                 }));
                 const grandTotal = saleItems.reduce((s, si) => s + +(+si.item.price * si.qty).toFixed(2), 0);
                 toast(`Saved — ₹${grandTotal.toFixed(2)} billed to ${saleStu.name}`, 'ok');
-                resetBulkSale();
-                updateDashboard();
+                resetBulkSale(); updateDashboard();
             } catch (e) { toast('Error saving: ' + e.message, 'er'); }
             finally { btn.textContent = 'Confirm Sale'; }
         }
@@ -2439,32 +2897,25 @@
                 const r = await apiFetch({ action: 'savePayment', payload: { id: String(payStu.id), name: payStu.name, className: payStu.className, amount: amt } });
                 if (r.status !== 'success') throw new Error(r.message || 'Failed');
                 toast(`₹${amt.toFixed(2)} saved for ${payStu.name}`, 'ok');
-                await loadPayStu(payStu);
-                updateDashboard();
+                await loadPayStu(payStu); updateDashboard();
             } catch (e) { toast('Error: ' + e.message, 'er'); }
             finally { btn.textContent = 'Save Payment'; }
         }
 
         // ── BALANCE SHEET ─────────────────────────────────────────────────────────────
         async function loadAllBalances() {
+            balanceAllData = [];
             const container = document.getElementById('bal-sections');
             const prog = document.getElementById('bal-progress');
             const fill = document.getElementById('bal-prog-fill');
             const txt = document.getElementById('bal-prog-txt');
             container.innerHTML = ''; prog.classList.remove('hidden');
             fill.style.width = '0%'; txt.textContent = 'Starting…';
-            let gb = 0, gp = 0, gbal = 0, done = 0;
-            balanceAllData = [];
-            const renderedClasses = new Set();
-
+            let done = 0;
             const settled = await Promise.allSettled(
                 CLASSES.map(cls => apiFetch({ action: 'getClassDues', className: cls }).then(data => ({ cls, data: Array.isArray(data) ? data : [] })))
             );
-
-            document.getElementById('bal-all-bought').textContent = '₹0';
-            document.getElementById('bal-all-paid').textContent = '₹0';
-            document.getElementById('bal-all-bal').textContent = '₹0';
-
+            const renderedClasses = new Set();
             for (const res of settled) {
                 done++;
                 fill.style.width = Math.round(done / CLASSES.length * 100) + '%';
@@ -2473,51 +2924,110 @@
                 const { cls, data } = res.value;
                 if (renderedClasses.has(cls)) continue;
                 renderedClasses.add(cls);
-                if (!data.length) { balanceAllData.push({ cls, data: [] }); continue; }
-                balanceAllData.push({ cls, data });
-                let cb = 0, cp = 0, cbal = 0;
-                data.forEach(s => { cb += +s.totalBilled || 0; cp += +s.totalPaid || 0; cbal += +s.balance || 0; });
-                gb += cb; gp += cp; gbal += cbal;
-                document.getElementById('bal-all-bought').textContent = `₹${gb.toFixed(2)}`;
-                document.getElementById('bal-all-paid').textContent = `₹${gp.toFixed(2)}`;
-                document.getElementById('bal-all-bal').textContent = `₹${gbal.toFixed(2)}`;
-                const sec = document.createElement('div');
-                sec.className = 'class-section'; sec.style.marginBottom = '1.5rem';
-                sec.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem"><div><span style="font-size:1rem;font-weight:800">Class ${cls}</span><span style="font-size:.78rem;color:var(--muted);margin-left:.75rem;font-family:var(--mono)">Billed: ₹${cb.toFixed(2)} &nbsp;|&nbsp; Paid: ₹${cp.toFixed(2)} &nbsp;|&nbsp; Balance: ₹${cbal.toFixed(2)}</span></div></div><div class="tw"><table><thead><tr><th>ID</th><th>Name</th><th class="tr">Billed (₹)</th><th class="tr">Paid (₹)</th><th class="tr">Balance (₹)</th><th class="tr no-print">Status</th></tr></thead><tbody>${data.map(s => { const b = +(s.totalBilled || 0), p = +(s.totalPaid || 0), bal = +(s.balance || 0); return `<tr><td class="mono">${s.id}</td><td style="font-weight:600">${s.name}</td><td class="tr mono">₹${b.toFixed(2)}</td><td class="tr mono" style="color:var(--green)">₹${p.toFixed(2)}</td><td class="tr mono" style="font-weight:800;color:${bal > 0 ? 'var(--red)' : 'var(--green)'}">${bal > 0 ? '₹' + bal.toFixed(2) : '—'}</td><td class="tr no-print">${bal > 0 ? `<span class="bdg bdg-r">₹${bal.toFixed(2)} due</span>` : '<span class="bdg bdg-g">Cleared</span>'}</td></tr>`; }).join('')}</tbody></table></div>`;
-                container.appendChild(sec);
+                balanceAllData.push({ cls, data: data || [] });
             }
             prog.classList.add('hidden');
-            if (!container.children.length) container.innerHTML = '<div class="card" style="text-align:center;padding:2rem;color:var(--muted)">No data found.</div>';
+            applyBalanceFilter();
         }
 
-        // ── BALANCE SHEET EXCEL EXPORT ────────────────────────────────────────────────
+        function applyBalanceFilter() {
+            const clsFilter = document.getElementById('bal-cls-filter').value;
+            const fromFilter = document.getElementById('bal-from').value;
+            const toFilter = document.getElementById('bal-to').value;
+            const statusFilter = document.getElementById('bal-status-filter').value;
+            const container = document.getElementById('bal-sections');
+            container.innerHTML = '';
+            let gb = 0, gp = 0, gbal = 0;
+            const filtered = balanceAllData.filter(({ cls }) => clsFilter === 'All' || cls === clsFilter);
+            if (!filtered.length) {
+                container.innerHTML = '<div class="card" style="text-align:center;padding:2.5rem;color:var(--muted)">No data. Click <strong>Refresh</strong> first.</div>';
+                document.getElementById('bal-all-bought').textContent = '₹0';
+                document.getElementById('bal-all-paid').textContent = '₹0';
+                document.getElementById('bal-all-bal').textContent = '₹0';
+                return;
+            }
+            for (const { cls, data } of filtered) {
+                let rows = data;
+                if (fromFilter || toFilter) {
+                    rows = data.filter(s => {
+                        if (!s.lastDate) return true;
+                        const d = s.lastDate;
+                        if (fromFilter && d < fromFilter) return false;
+                        if (toFilter && d > toFilter) return false;
+                        return true;
+                    });
+                }
+                if (statusFilter === 'Due') rows = rows.filter(s => +(s.balance || 0) > 0);
+                if (statusFilter === 'Cleared') rows = rows.filter(s => +(s.balance || 0) <= 0);
+                if (!rows.length) continue;
+                let cb = 0, cp = 0, cbal = 0;
+                rows.forEach(s => { cb += +s.totalBilled || 0; cp += +s.totalPaid || 0; cbal += +s.balance || 0; });
+                gb += cb; gp += cp; gbal += cbal;
+                const sec = document.createElement('div');
+                sec.className = 'class-section'; sec.style.marginBottom = '1.5rem';
+                sec.innerHTML = `
+                <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.6rem">
+                    <div>
+                        <span style="font-size:1rem;font-weight:800">Class ${cls}</span>
+                        <span style="font-size:.78rem;color:var(--muted);margin-left:.75rem;font-family:var(--mono)">
+                            Billed: ₹${cb.toFixed(2)} &nbsp;|&nbsp; Paid: ₹${cp.toFixed(2)} &nbsp;|&nbsp; Balance: ₹${cbal.toFixed(2)}
+                        </span>
+                    </div>
+                </div>
+                <div class="tw">
+                    <table>
+                        <thead><tr><th>ID</th><th>Name</th><th class="tr">Balance (₹)</th><th class="tr no-print">Status</th></tr></thead>
+                        <tbody>
+                            ${rows.map(s => {
+                    const bal = +(s.balance || 0);
+                    return `<tr>
+                                    <td class="mono">${s.id}</td>
+                                    <td style="font-weight:600">${s.name}</td>
+                                    <td class="tr mono" style="font-weight:800;color:${bal > 0 ? 'var(--red)' : 'var(--green)'}">
+                                        ${bal > 0 ? '₹' + bal.toFixed(2) : '—'}
+                                    </td>
+                                    <td class="tr no-print">
+                                        ${bal > 0 ? `<span class="bdg bdg-r">₹${bal.toFixed(2)} due</span>` : '<span class="bdg bdg-g">Cleared</span>'}
+                                    </td>
+                                </tr>`;
+                }).join('')}
+                        </tbody>
+                    </table>
+                </div>`;
+                container.appendChild(sec);
+            }
+            document.getElementById('bal-all-bought').textContent = `₹${gb.toFixed(2)}`;
+            document.getElementById('bal-all-paid').textContent = `₹${gp.toFixed(2)}`;
+            document.getElementById('bal-all-bal').textContent = `₹${gbal.toFixed(2)}`;
+            if (!container.children.length) {
+                container.innerHTML = '<div class="card" style="text-align:center;padding:2rem;color:var(--muted)">No students match the current filters.</div>';
+            }
+        }
+
+        function clearBalanceFilter() {
+            document.getElementById('bal-cls-filter').value = 'All';
+            document.getElementById('bal-from').value = '';
+            document.getElementById('bal-to').value = '';
+            document.getElementById('bal-status-filter').value = 'All';
+            applyBalanceFilter();
+        }
+
+        // ── BALANCE EXCEL ─────────────────────────────────────────────────────────────
         async function exportBalanceExcel() {
             if (!balanceAllData.length) return toast('Load balance sheet first (click Refresh)', 'er');
-
             if (!window.XLSX) {
                 toast('Loading Excel engine…', 'ok');
                 await new Promise((resolve, reject) => {
                     const script = document.createElement('script');
                     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
-                    script.onload = resolve;
-                    script.onerror = () => reject(new Error('Failed to load SheetJS'));
+                    script.onload = resolve; script.onerror = () => reject(new Error('Failed to load SheetJS'));
                     document.head.appendChild(script);
                 });
             }
-
             try {
                 const wb = XLSX.utils.book_new();
                 const dateStr = today();
-
-                // Border style
-                const border = {
-                    top: { style: 'thin', color: { rgb: '000000' } },
-                    bottom: { style: 'thin', color: { rgb: '000000' } },
-                    left: { style: 'thin', color: { rgb: '000000' } },
-                    right: { style: 'thin', color: { rgb: '000000' } }
-                };
-
-                // Style helpers
+                const border = { top: { style: 'thin', color: { rgb: '000000' } }, bottom: { style: 'thin', color: { rgb: '000000' } }, left: { style: 'thin', color: { rgb: '000000' } }, right: { style: 'thin', color: { rgb: '000000' } } };
                 const headerStyle = { font: { bold: true, color: { rgb: 'FFFFFF' }, name: 'Arial', sz: 11 }, fill: { fgColor: { rgb: '1F3864' } }, alignment: { horizontal: 'center', vertical: 'center' }, border };
                 const titleStyle = { font: { bold: true, color: { rgb: 'FFFFFF' }, name: 'Arial', sz: 13 }, fill: { fgColor: { rgb: '1F3864' } }, alignment: { horizontal: 'center', vertical: 'center' } };
                 const dataStyle = { font: { name: 'Arial', sz: 10 }, border, alignment: { vertical: 'center' } };
@@ -2530,132 +3040,53 @@
                 const redAlt = { font: { bold: true, color: { rgb: 'C00000' }, name: 'Arial', sz: 10 }, fill: { fgColor: { rgb: 'DCE6F1' } }, border, alignment: { horizontal: 'right', vertical: 'center' }, numFmt: '#,##0.00' };
                 const greenStyle = { font: { bold: true, color: { rgb: '375623' }, name: 'Arial', sz: 10 }, border, alignment: { horizontal: 'right', vertical: 'center' }, numFmt: '#,##0.00' };
                 const greenAlt = { font: { bold: true, color: { rgb: '375623' }, name: 'Arial', sz: 10 }, fill: { fgColor: { rgb: 'DCE6F1' } }, border, alignment: { horizontal: 'right', vertical: 'center' }, numFmt: '#,##0.00' };
-
-                function applyStyle(ws, cellRef, style) {
-                    if (!ws[cellRef]) ws[cellRef] = { t: 'z', v: '' };
-                    ws[cellRef].s = style;
-                }
-
-                function setCell(ws, cellRef, value, style, type) {
-                    ws[cellRef] = { v: value, t: type || (typeof value === 'number' ? 'n' : 's'), s: style };
-                }
-
-                // ── Summary (All Classes) sheet ──
-                {
-                    const wsData = [['Class', 'Student ID', 'Name', 'Total Billed (₹)', 'Total Paid (₹)', 'Balance to Pay (₹)']];
-                    let gb = 0, gp = 0, gbal = 0;
-                    balanceAllData.forEach(({ data }) => data.forEach(s => {
-                        gb += +s.totalBilled || 0; gp += +s.totalPaid || 0; gbal += +s.balance || 0;
-                    }));
-                    // We'll build row by row below
-                    const ws = {};
-                    const cols = ['A', 'B', 'C', 'D', 'E', 'F'];
-                    const headers = ['Class', 'Student ID', 'Name', 'Total Billed (₹)', 'Total Paid (₹)', 'Balance to Pay (₹)'];
-
-                    // Title row
-                    ws['A1'] = { v: `Balance Sheet — Exported: ${dateStr}`, t: 's', s: titleStyle };
-                    ws['!merges'] = [{ s: { r: 0, c: 0 }, e: { r: 0, c: 5 } }];
-
-                    // Header row
-                    headers.forEach((h, i) => { ws[`${cols[i]}2`] = { v: h, t: 's', s: headerStyle }; });
-
-                    let row = 3;
-                    let tB = 0, tP = 0, tBal = 0;
-                    balanceAllData.forEach(({ cls, data }) => {
-                        data.forEach((s, si) => {
-                            const alt = si % 2 === 1;
-                            const b = +(s.totalBilled || 0), p = +(s.totalPaid || 0), bal = +(s.balance || 0);
-                            tB += b; tP += p; tBal += bal;
-                            const ds = alt ? dataAlt : dataStyle;
-                            const ns = alt ? numAlt : numStyle;
-                            const bals = bal > 0 ? (alt ? redAlt : redStyle) : (alt ? greenAlt : greenStyle);
-                            ws[`A${row}`] = { v: cls, t: 's', s: ds };
-                            ws[`B${row}`] = { v: String(s.id), t: 's', s: ds };
-                            ws[`C${row}`] = { v: s.name, t: 's', s: ds };
-                            ws[`D${row}`] = { v: b, t: 'n', s: ns };
-                            ws[`E${row}`] = { v: p, t: 'n', s: ns };
-                            ws[`F${row}`] = { v: bal, t: 'n', s: bals };
-                            row++;
-                        });
-                    });
-                    // Grand total
-                    ws[`A${row}`] = { v: '', t: 's', s: totalLbl };
-                    ws[`B${row}`] = { v: '', t: 's', s: totalLbl };
-                    ws[`C${row}`] = { v: 'Grand Total', t: 's', s: totalLbl };
-                    ws[`D${row}`] = { v: tB, t: 'n', s: totalStyle };
-                    ws[`E${row}`] = { v: tP, t: 'n', s: totalStyle };
-                    ws[`F${row}`] = { v: tBal, t: 'n', s: totalStyle };
-
-                    ws['!ref'] = `A1:F${row}`;
-                    ws['!cols'] = [{ wch: 8 }, { wch: 12 }, { wch: 28 }, { wch: 18 }, { wch: 15 }, { wch: 18 }];
-                    ws['!rows'] = [{ hpt: 22 }, { hpt: 20 }];
-                    XLSX.utils.book_append_sheet(wb, ws, 'All Classes');
-                }
-
-                // ── Per-class sheets ──
+                const ws = {}; const cols = ['A', 'B', 'C', 'D', 'E', 'F']; const headers = ['Class', 'Student ID', 'Name', 'Total Billed (₹)', 'Total Paid (₹)', 'Balance to Pay (₹)'];
+                ws['A1'] = { v: `Balance Sheet — Exported: ${dateStr}`, t: 's', s: titleStyle };
+                ws['!merges'] = [{ s: { r: 0, c: 0 }, e: { r: 0, c: 5 } }];
+                headers.forEach((h, i) => { ws[`${cols[i]}2`] = { v: h, t: 's', s: headerStyle }; });
+                let row = 3; let tB = 0, tP = 0, tBal = 0;
                 balanceAllData.forEach(({ cls, data }) => {
-                    const ws = {};
-                    const cols = ['A', 'B', 'C', 'D'];
-                    const headers = ['Student ID', 'Name', 'Balance to Pay (₹)', 'Status'];
-
-                    // Title
-                    ws['A1'] = { v: `Class ${cls} — Balance Sheet`, t: 's', s: titleStyle };
-                    ws['!merges'] = [{ s: { r: 0, c: 0 }, e: { r: 0, c: 3 } }];
-
-                    // Sub-title
-                    ws['A2'] = { v: `Exported: ${dateStr}`, t: 's', s: { font: { italic: true, name: 'Arial', sz: 9 }, alignment: { horizontal: 'left' } } };
-
-                    // Headers
-                    headers.forEach((h, i) => { ws[`${cols[i]}3`] = { v: h, t: 's', s: headerStyle }; });
-
-                    let row = 4;
-                    let clsTot = 0;
-
-                    // Show ALL students from this class (including those who didn't buy)
-                    const classStudents = students.filter(s => s.className === cls);
-                    const dataMap = {};
-                    data.forEach(s => { dataMap[String(s.id).trim()] = s; });
-
-                    const allRows = classStudents.map(stu => {
-                        const d = dataMap[String(stu.id).trim()];
-                        return { id: stu.id, name: stu.name, billed: d ? +(d.totalBilled || 0) : 0, paid: d ? +(d.totalPaid || 0) : 0, balance: d ? +(d.balance || 0) : 0 };
+                    data.forEach((s, si) => {
+                        const alt = si % 2 === 1; const b = +(s.totalBilled || 0), p = +(s.totalPaid || 0), bal = +(s.balance || 0);
+                        tB += b; tP += p; tBal += bal;
+                        const ds = alt ? dataAlt : dataStyle, ns = alt ? numAlt : numStyle;
+                        const bals = bal > 0 ? (alt ? redAlt : redStyle) : (alt ? greenAlt : greenStyle);
+                        ws[`A${row}`] = { v: cls, t: 's', s: ds }; ws[`B${row}`] = { v: String(s.id), t: 's', s: ds };
+                        ws[`C${row}`] = { v: s.name, t: 's', s: ds }; ws[`D${row}`] = { v: b, t: 'n', s: ns };
+                        ws[`E${row}`] = { v: p, t: 'n', s: ns }; ws[`F${row}`] = { v: bal, t: 'n', s: bals }; row++;
                     });
-
-                    // If no student list available, fall back to data rows
-                    const rows2render = allRows.length ? allRows : data.map(s => ({ id: s.id, name: s.name, billed: +(s.totalBilled || 0), paid: +(s.totalPaid || 0), balance: +(s.balance || 0) }));
-
+                });
+                ws[`A${row}`] = { v: '', t: 's', s: totalLbl }; ws[`B${row}`] = { v: '', t: 's', s: totalLbl };
+                ws[`C${row}`] = { v: 'Grand Total', t: 's', s: totalLbl }; ws[`D${row}`] = { v: tB, t: 'n', s: totalStyle };
+                ws[`E${row}`] = { v: tP, t: 'n', s: totalStyle }; ws[`F${row}`] = { v: tBal, t: 'n', s: totalStyle };
+                ws['!ref'] = `A1:F${row}`; ws['!cols'] = [{ wch: 8 }, { wch: 12 }, { wch: 28 }, { wch: 18 }, { wch: 15 }, { wch: 18 }]; ws['!rows'] = [{ hpt: 22 }, { hpt: 20 }];
+                XLSX.utils.book_append_sheet(wb, ws, 'All Classes');
+                balanceAllData.forEach(({ cls, data }) => {
+                    const ws2 = {}; const headers2 = ['Student ID', 'Name', 'Balance to Pay (₹)', 'Status'];
+                    ws2['A1'] = { v: `Class ${cls} — Balance Sheet`, t: 's', s: titleStyle };
+                    ws2['!merges'] = [{ s: { r: 0, c: 0 }, e: { r: 0, c: 3 } }];
+                    ws2['A2'] = { v: `Exported: ${dateStr}`, t: 's', s: { font: { italic: true, name: 'Arial', sz: 9 }, alignment: { horizontal: 'left' } } };
+                    headers2.forEach((h, i) => { ws2[`${String.fromCharCode(65 + i)}3`] = { v: h, t: 's', s: headerStyle }; });
+                    let r2 = 4; let clsTot = 0;
+                    const classStudents = students.filter(s => s.className === cls); const dataMap = {};
+                    data.forEach(s => { dataMap[String(s.id).trim()] = s; });
+                    const allRows = classStudents.map(stu => { const d = dataMap[String(stu.id).trim()]; return { id: stu.id, name: stu.name, balance: d ? +(d.balance || 0) : 0 }; });
+                    const rows2render = allRows.length ? allRows : data.map(s => ({ id: s.id, name: s.name, balance: +(s.balance || 0) }));
                     rows2render.forEach((s, si) => {
-                        const alt = si % 2 === 1;
-                        const ds = alt ? dataAlt : dataStyle;
-                        const bal = s.balance;
-                        clsTot += bal;
+                        const alt = si % 2 === 1; const ds = alt ? dataAlt : dataStyle; const bal = s.balance; clsTot += bal;
                         const bals = bal > 0 ? (alt ? redAlt : redStyle) : (alt ? greenAlt : greenStyle);
                         const statusTxt = bal > 0 ? `₹${bal.toFixed(2)} Due` : 'Cleared';
-                        const statusStyle = bal > 0
-                            ? { font: { bold: true, color: { rgb: 'C00000' }, name: 'Arial', sz: 10 }, border, alignment: { horizontal: 'center', vertical: 'center' } }
-                            : { font: { bold: true, color: { rgb: '375623' }, name: 'Arial', sz: 10 }, border, alignment: { horizontal: 'center', vertical: 'center' } };
-                        if (alt) { statusStyle.fill = { fgColor: { rgb: 'DCE6F1' } }; }
-                        ws[`A${row}`] = { v: String(s.id), t: 's', s: ds };
-                        ws[`B${row}`] = { v: s.name, t: 's', s: ds };
-                        ws[`C${row}`] = { v: bal, t: 'n', s: bals };
-                        ws[`D${row}`] = { v: statusTxt, t: 's', s: statusStyle };
-                        row++;
+                        const statusStyle = bal > 0 ? { font: { bold: true, color: { rgb: 'C00000' }, name: 'Arial', sz: 10 }, border, alignment: { horizontal: 'center', vertical: 'center' }, ...(alt ? { fill: { fgColor: { rgb: 'DCE6F1' } } } : {}) } : { font: { bold: true, color: { rgb: '375623' }, name: 'Arial', sz: 10 }, border, alignment: { horizontal: 'center', vertical: 'center' }, ...(alt ? { fill: { fgColor: { rgb: 'DCE6F1' } } } : {}) };
+                        ws2[`A${r2}`] = { v: String(s.id), t: 's', s: ds }; ws2[`B${r2}`] = { v: s.name, t: 's', s: ds };
+                        ws2[`C${r2}`] = { v: bal, t: 'n', s: bals }; ws2[`D${r2}`] = { v: statusTxt, t: 's', s: statusStyle }; r2++;
                     });
-
-                    // Total
-                    ws[`A${row}`] = { v: '', t: 's', s: totalLbl };
-                    ws[`B${row}`] = { v: 'Class Total Due', t: 's', s: totalLbl };
-                    ws[`C${row}`] = { v: clsTot, t: 'n', s: totalStyle };
-                    ws[`D${row}`] = { v: '', t: 's', s: totalLbl };
-
-                    ws['!ref'] = `A1:D${row}`;
-                    ws['!cols'] = [{ wch: 14 }, { wch: 30 }, { wch: 20 }, { wch: 14 }];
-                    ws['!rows'] = [{ hpt: 22 }, { hpt: 14 }];
-                    XLSX.utils.book_append_sheet(wb, ws, cls);
+                    ws2[`A${r2}`] = { v: '', t: 's', s: totalLbl }; ws2[`B${r2}`] = { v: 'Class Total Due', t: 's', s: totalLbl };
+                    ws2[`C${r2}`] = { v: clsTot, t: 'n', s: totalStyle }; ws2[`D${r2}`] = { v: '', t: 's', s: totalLbl };
+                    ws2['!ref'] = `A1:D${r2}`; ws2['!cols'] = [{ wch: 14 }, { wch: 30 }, { wch: 20 }, { wch: 14 }]; ws2['!rows'] = [{ hpt: 22 }, { hpt: 14 }];
+                    XLSX.utils.book_append_sheet(wb, ws2, cls);
                 });
-
                 XLSX.writeFile(wb, `balance_sheet_${dateStr}.xlsx`);
-                toast(`Excel exported with borders — ${balanceAllData.filter(d => d.data.length).length} class sheets`, 'ok');
+                toast(`Excel exported — ${balanceAllData.filter(d => d.data.length).length} class sheets`, 'ok');
             } catch (e) { toast('Export failed: ' + e.message, 'er'); }
         }
 
@@ -2673,7 +3104,10 @@
                 });
                 summaryAllRows = Object.values(map).sort((a, b) => b.total - a.total);
                 renderSummary(summaryAllRows);
-            } catch (e) { tb.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:2rem">Failed to load.</td></tr>'; toast('Failed to load summary', 'er'); }
+            } catch (e) {
+                tb.innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:2rem">Failed to load.</td></tr>';
+                toast('Failed to load summary', 'er');
+            }
         }
 
         function renderSummary(rows) {
@@ -2691,13 +3125,8 @@
         }
 
         function clearSummary() {
-            document.getElementById('su-cls').value = 'All';
-            document.getElementById('su-from').value = '';
-            document.getElementById('su-to').value = '';
-            document.getElementById('su-search').value = '';
-            summaryAllRows = [];
-            document.getElementById('su-count').textContent = '0';
-            document.getElementById('su-grand').textContent = '₹0';
+            document.getElementById('su-cls').value = 'All'; document.getElementById('su-from').value = ''; document.getElementById('su-to').value = ''; document.getElementById('su-search').value = '';
+            summaryAllRows = []; document.getElementById('su-count').textContent = '0'; document.getElementById('su-grand').textContent = '₹0';
             document.getElementById('su-body').innerHTML = '<tr><td colspan="4" style="text-align:center;color:var(--muted);padding:2.5rem">Set filters and click <strong>Load</strong>.</td></tr>';
         }
 
@@ -2713,65 +3142,50 @@
                 await new Promise((resolve, reject) => {
                     const script = document.createElement('script');
                     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js';
-                    script.onload = resolve;
-                    script.onerror = () => reject(new Error('Failed to load SheetJS'));
+                    script.onload = resolve; script.onerror = () => reject(new Error('Failed to load SheetJS'));
                     document.head.appendChild(script);
                 });
             }
             try {
-                const wb = XLSX.utils.book_new();
-                const dateStr = today();
+                const wb = XLSX.utils.book_new(); const dateStr = today();
                 const border = { top: { style: 'thin', color: { rgb: '000000' } }, bottom: { style: 'thin', color: { rgb: '000000' } }, left: { style: 'thin', color: { rgb: '000000' } }, right: { style: 'thin', color: { rgb: '000000' } } };
                 const hStyle = { font: { bold: true, color: { rgb: 'FFFFFF' }, name: 'Arial', sz: 11 }, fill: { fgColor: { rgb: '1F3864' } }, alignment: { horizontal: 'center' }, border };
                 const dStyle = (alt) => ({ font: { name: 'Arial', sz: 10 }, fill: alt ? { fgColor: { rgb: 'DCE6F1' } } : undefined, border, alignment: { vertical: 'center' } });
                 const nStyle = (alt) => ({ font: { name: 'Arial', sz: 10 }, fill: alt ? { fgColor: { rgb: 'DCE6F1' } } : undefined, border, alignment: { horizontal: 'right' }, numFmt: '#,##0.00' });
                 const tStyle = { font: { bold: true, name: 'Arial', sz: 10 }, fill: { fgColor: { rgb: 'FFF2CC' } }, border, alignment: { horizontal: 'right' }, numFmt: '#,##0.00' };
                 const tLbl = { font: { bold: true, name: 'Arial', sz: 10 }, fill: { fgColor: { rgb: 'FFF2CC' } }, border, alignment: { horizontal: 'right' } };
-
-                // All Classes
                 const allHeader = ['#', 'Student ID', 'Name', 'Class', 'Total Billed (₹)'];
                 const ws = {}; let r = 1;
-                allHeader.forEach((h, i) => { ws[`${String.fromCharCode(65 + i)}${r}`] = { v: h, t: 's', s: hStyle }; });
-                r++;
+                allHeader.forEach((h, i) => { ws[`${String.fromCharCode(65 + i)}${r}`] = { v: h, t: 's', s: hStyle }; }); r++;
                 let grand = 0;
                 summaryAllRows.forEach((row, i) => {
-                    const alt = i % 2 === 1;
-                    grand += row.total;
+                    const alt = i % 2 === 1; grand += row.total;
                     ['#', 'id', 'name', 'className', 'total'].forEach((k, ci) => {
-                        const v = k === '#' ? i + 1 : row[k];
-                        const isNum = k === '#' || k === 'total';
+                        const v = k === '#' ? i + 1 : row[k]; const isNum = k === '#' || k === 'total';
                         ws[`${String.fromCharCode(65 + ci)}${r}`] = { v, t: isNum ? 'n' : 's', s: isNum ? nStyle(alt) : dStyle(alt) };
-                    });
-                    r++;
+                    }); r++;
                 });
                 ws[`A${r}`] = { v: '', t: 's', s: tLbl }; ws[`B${r}`] = { v: '', t: 's', s: tLbl }; ws[`C${r}`] = { v: '', t: 's', s: tLbl };
                 ws[`D${r}`] = { v: 'Grand Total', t: 's', s: tLbl }; ws[`E${r}`] = { v: grand, t: 'n', s: tStyle };
                 ws['!ref'] = `A1:E${r}`; ws['!cols'] = [{ wch: 5 }, { wch: 12 }, { wch: 28 }, { wch: 8 }, { wch: 18 }];
                 XLSX.utils.book_append_sheet(wb, ws, 'All Classes');
-
                 const byClass = {};
                 summaryAllRows.forEach(row => { if (!byClass[row.className]) byClass[row.className] = []; byClass[row.className].push(row); });
                 CLASSES.forEach(cls => {
-                    const rows = byClass[cls];
-                    if (!rows || !rows.length) return;
+                    const rows = byClass[cls]; if (!rows || !rows.length) return;
                     const ws2 = {}; let ri = 1;
-                    ['#', 'Student ID', 'Name', 'Total Billed (₹)'].forEach((h, i) => { ws2[`${String.fromCharCode(65 + i)}${ri}`] = { v: h, t: 's', s: hStyle }; });
-                    ri++;
+                    ['#', 'Student ID', 'Name', 'Total Billed (₹)'].forEach((h, i) => { ws2[`${String.fromCharCode(65 + i)}${ri}`] = { v: h, t: 's', s: hStyle }; }); ri++;
                     let ct = 0;
                     rows.forEach((row, i) => {
                         const alt = i % 2 === 1; ct += row.total;
-                        ws2[`A${ri}`] = { v: i + 1, t: 'n', s: nStyle(alt) };
-                        ws2[`B${ri}`] = { v: String(row.id), t: 's', s: dStyle(alt) };
-                        ws2[`C${ri}`] = { v: row.name, t: 's', s: dStyle(alt) };
-                        ws2[`D${ri}`] = { v: row.total, t: 'n', s: nStyle(alt) };
-                        ri++;
+                        ws2[`A${ri}`] = { v: i + 1, t: 'n', s: nStyle(alt) }; ws2[`B${ri}`] = { v: String(row.id), t: 's', s: dStyle(alt) };
+                        ws2[`C${ri}`] = { v: row.name, t: 's', s: dStyle(alt) }; ws2[`D${ri}`] = { v: row.total, t: 'n', s: nStyle(alt) }; ri++;
                     });
                     ws2[`A${ri}`] = { v: '', t: 's', s: tLbl }; ws2[`B${ri}`] = { v: '', t: 's', s: tLbl };
                     ws2[`C${ri}`] = { v: 'Class Total', t: 's', s: tLbl }; ws2[`D${ri}`] = { v: ct, t: 'n', s: tStyle };
                     ws2['!ref'] = `A1:D${ri}`; ws2['!cols'] = [{ wch: 5 }, { wch: 12 }, { wch: 28 }, { wch: 18 }];
                     XLSX.utils.book_append_sheet(wb, ws2, cls);
                 });
-
                 XLSX.writeFile(wb, `student_summary_classwise_${dateStr}.xlsx`);
                 toast(`Excel exported — ${Object.keys(byClass).length} class sheets`, 'ok');
             } catch (e) { toast('Export failed: ' + e.message, 'er'); }
@@ -2781,20 +3195,22 @@
             const cls = document.getElementById('su-cls').value;
             const from = document.getElementById('su-from').value;
             const to = document.getElementById('su-to').value;
-            let title = cls === 'All' ? 'All Classes' : `Class ${cls}`;
-            if (from || to) title += `  |  ${from || 'start'} to ${to || 'today'}`;
-            title += `  |  Printed: ${new Date().toLocaleDateString('en-IN')}`;
-            document.getElementById('ps-title').textContent = title;
             if (!summaryAllRows.length) { toast('Load data first', 'er'); return; }
-            let grand = 0;
-            document.getElementById('ps-rows').innerHTML = summaryAllRows.map((r, i) => { grand = +(grand + r.total).toFixed(2); return `<tr><td>${i + 1}</td><td style="font-family:monospace">${r.id}</td><td style="font-weight:600">${r.name}</td><td>${r.className}</td><td class="num">₹${r.total.toFixed(2)}</td></tr>`; }).join('');
+            let titleStr = cls === 'All' ? 'All Classes' : `Class ${cls}`;
+            if (from || to) titleStr += `  ·  ${from || 'start'} → ${to || 'today'}`;
+            document.getElementById('ps-meta-txt').textContent = titleStr;
+            document.getElementById('ps-date-txt').textContent = `Printed: ${new Date().toLocaleDateString('en-IN', { day: '2-digit', month: 'long', year: 'numeric' })}`;
+            const rows = summaryAllRows; const grand = rows.reduce((s, r) => s + r.total, 0); const avg = rows.length ? grand / rows.length : 0;
+            document.getElementById('ps-stat-count').textContent = rows.length;
+            document.getElementById('ps-stat-total').textContent = `₹${grand.toFixed(2)}`;
+            document.getElementById('ps-stat-avg').textContent = `₹${avg.toFixed(2)}`;
+            document.getElementById('ps-rows').innerHTML = rows.map((r, i) => `<tr><td>${i + 1}</td><td style="font-family:monospace">${r.id}</td><td style="font-weight:600">${r.name}</td><td>${r.className}</td><td class="num">₹${r.total.toFixed(2)}</td></tr>`).join('');
             document.getElementById('ps-grand').textContent = `₹${grand.toFixed(2)}`;
             window.print();
         }
 
         // ── HISTORY ───────────────────────────────────────────────────────────────────
         let historyData = [];
-
         async function loadHistory() {
             document.getElementById('hist-list').innerHTML = '<div style="text-align:center;padding:2rem;color:var(--muted)">Loading…</div>';
             try {
@@ -2805,181 +3221,137 @@
                 document.getElementById('hist-list').innerHTML = '<div style="text-align:center;padding:2rem;color:var(--red)">Failed to load history.</div>';
             }
         }
-
         function renderHistory() {
             const list = document.getElementById('hist-list');
             if (!historyData.length) { list.innerHTML = '<div style="text-align:center;padding:2rem;color:var(--muted)">No transactions found.</div>'; return; }
             list.innerHTML = historyData.map((h, i) => {
                 const isSale = h.type === 'Sale';
                 return `<div id="hist-item-${i}">
-  <div class="hist-item">
-    <span class="hist-badge ${isSale ? 'sale' : 'pay'}">${h.type}</span>
-    <div class="hist-info">
-      <div class="hist-name">${h.name || '—'} <span style="font-size:.72rem;color:var(--muted);font-weight:500">${h.className}</span></div>
-      <div class="hist-meta">${h.date} &nbsp;·&nbsp; ID: ${h.id} &nbsp;·&nbsp; ${isSale ? h.details + ' × ' + h.quantity : 'Payment'}</div>
-    </div>
-    <span class="hist-amount ${isSale ? 'sale' : 'pay'}">₹${(+h.amount).toFixed(2)}</span>
-    <div class="hist-actions">
-      <button class="ha-btn" onclick="toggleEditForm(${i})">✏️ Edit</button>
-      <button class="ha-btn del" onclick="deleteHistItem(${i})">🗑 Delete</button>
-    </div>
-  </div>
-  <div id="edit-form-${i}" class="edit-form hidden"></div>
-</div>`;
+                <div class="hist-item">
+                    <span class="hist-badge ${isSale ? 'sale' : 'pay'}">${h.type}</span>
+                    <div class="hist-info">
+                        <div class="hist-name">${h.name || '—'} <span style="font-size:.72rem;color:var(--muted);font-weight:500">${h.className}</span></div>
+                        <div class="hist-meta">${h.date} &nbsp;·&nbsp; ID: ${h.id} &nbsp;·&nbsp; ${isSale ? h.details + ' × ' + h.quantity : 'Payment'}</div>
+                    </div>
+                    <span class="hist-amount ${isSale ? 'sale' : 'pay'}">₹${(+h.amount).toFixed(2)}</span>
+                    <div class="hist-actions">
+                        <button class="ha-btn" onclick="toggleEditForm(${i})">✏️ Edit</button>
+                        <button class="ha-btn del" onclick="deleteHistItem(${i})">🗑 Delete</button>
+                    </div>
+                </div>
+                <div id="edit-form-${i}" class="edit-form hidden"></div>
+            </div>`;
             }).join('');
         }
-
         function toggleEditForm(i) {
-            const h = historyData[i];
-            const formEl = document.getElementById(`edit-form-${i}`);
+            const h = historyData[i]; const formEl = document.getElementById(`edit-form-${i}`);
             if (!formEl.classList.contains('hidden')) { formEl.classList.add('hidden'); return; }
             if (h.type === 'Sale') {
                 const itemOpts = items.map((it, idx) => `<option value="${idx}" ${it.name === h.details ? 'selected' : ''}>${it.name} — ₹${(+it.price).toFixed(2)}</option>`).join('');
                 formEl.innerHTML = `<div style="font-size:.75rem;font-weight:800;color:var(--accent);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.5px">Edit Sale</div>
-      <div class="edit-form-row">
-        <div><label>Item</label><select id="ef-item-${i}"><option value="">Select…</option>${itemOpts}</select></div>
-        <div><label>Qty</label><input type="number" id="ef-qty-${i}" value="${h.quantity}" min="1"></div>
-        <div><label>Total ₹</label><input type="number" id="ef-total-${i}" value="${h.amount}" min="0" step="0.01"></div>
-        <div></div>
-      </div>
-      <div class="edit-form-actions">
-        <button class="eb eb-save" onclick="saveEditSale(${i})">Save Changes</button>
-        <button class="eb eb-cancel" onclick="document.getElementById('edit-form-${i}').classList.add('hidden')">Cancel</button>
-      </div>`;
+                <div class="edit-form-row">
+                    <div><label>Item</label><select id="ef-item-${i}"><option value="">Select…</option>${itemOpts}</select></div>
+                    <div><label>Qty</label><input type="number" id="ef-qty-${i}" value="${h.quantity}" min="1"></div>
+                    <div><label>Total ₹</label><input type="number" id="ef-total-${i}" value="${h.amount}" min="0" step="0.01"></div>
+                    <div></div>
+                </div>
+                <div class="edit-form-actions">
+                    <button class="eb eb-save" onclick="saveEditSale(${i})">Save Changes</button>
+                    <button class="eb eb-cancel" onclick="document.getElementById('edit-form-${i}').classList.add('hidden')">Cancel</button>
+                </div>`;
                 setTimeout(() => {
-                    const is = document.getElementById(`ef-item-${i}`);
-                    const qi = document.getElementById(`ef-qty-${i}`);
-                    const ti = document.getElementById(`ef-total-${i}`);
+                    const is = document.getElementById(`ef-item-${i}`); const qi = document.getElementById(`ef-qty-${i}`); const ti = document.getElementById(`ef-total-${i}`);
                     const rc = () => { if (is.value !== '' && items[+is.value]) ti.value = (items[+is.value].price * (parseInt(qi.value) || 1)).toFixed(2); };
                     is.addEventListener('change', rc); qi.addEventListener('input', rc);
                 }, 0);
             } else {
                 formEl.innerHTML = `<div style="font-size:.75rem;font-weight:800;color:var(--green);margin-bottom:.6rem;text-transform:uppercase;letter-spacing:.5px">Edit Payment</div>
-      <div style="display:grid;grid-template-columns:200px auto;gap:.5rem;align-items:end">
-        <div><label>Amount (₹)</label><input type="number" id="ef-amt-${i}" value="${h.amount}" min="0" step="0.01"></div>
-        <div></div>
-      </div>
-      <div class="edit-form-actions">
-        <button class="eb eb-save" onclick="saveEditPayment(${i})">Save Changes</button>
-        <button class="eb eb-cancel" onclick="document.getElementById('edit-form-${i}').classList.add('hidden')">Cancel</button>
-      </div>`;
+                <div style="display:grid;grid-template-columns:200px auto;gap:.5rem;align-items:end">
+                    <div><label>Amount (₹)</label><input type="number" id="ef-amt-${i}" value="${h.amount}" min="0" step="0.01"></div>
+                    <div></div>
+                </div>
+                <div class="edit-form-actions">
+                    <button class="eb eb-save" onclick="saveEditPayment(${i})">Save Changes</button>
+                    <button class="eb eb-cancel" onclick="document.getElementById('edit-form-${i}').classList.add('hidden')">Cancel</button>
+                </div>`;
             }
             formEl.classList.remove('hidden');
         }
-
         async function saveEditSale(i) {
-            const h = historyData[i];
-            const is = document.getElementById(`ef-item-${i}`);
+            const h = historyData[i]; const is = document.getElementById(`ef-item-${i}`);
             const qty = parseInt(document.getElementById(`ef-qty-${i}`).value) || 1;
             const total = parseFloat(document.getElementById(`ef-total-${i}`).value) || 0;
             const item = is.value !== '' ? items[+is.value].name : h.details;
             if (!item || qty < 1 || total < 0) return toast('Invalid values', 'er');
             try {
                 await apiFetch({ action: 'editSaleRow', payload: { rowIndex: h.rowIndex, item, quantity: qty, total } });
-                toast('Sale updated', 'ok');
-                document.getElementById(`edit-form-${i}`).classList.add('hidden');
-                await loadHistory();
+                toast('Sale updated', 'ok'); document.getElementById(`edit-form-${i}`).classList.add('hidden'); await loadHistory();
             } catch (e) { toast('Failed: ' + e.message, 'er'); }
         }
-
         async function saveEditPayment(i) {
-            const h = historyData[i];
-            const amt = parseFloat(document.getElementById(`ef-amt-${i}`).value) || 0;
+            const h = historyData[i]; const amt = parseFloat(document.getElementById(`ef-amt-${i}`).value) || 0;
             if (amt <= 0) return toast('Enter valid amount', 'er');
             try {
                 await apiFetch({ action: 'editPaymentRow', payload: { rowIndex: h.rowIndex, amount: amt } });
-                toast('Payment updated', 'ok');
-                document.getElementById(`edit-form-${i}`).classList.add('hidden');
-                await loadHistory();
+                toast('Payment updated', 'ok'); document.getElementById(`edit-form-${i}`).classList.add('hidden'); await loadHistory();
             } catch (e) { toast('Failed: ' + e.message, 'er'); }
         }
-
         async function deleteHistItem(i) {
-            const h = historyData[i];
-            const label = h.type === 'Sale' ? `₹${h.amount} sale for ${h.name}` : `₹${h.amount} payment from ${h.name}`;
+            const h = historyData[i]; const label = h.type === 'Sale' ? `₹${h.amount} sale for ${h.name}` : `₹${h.amount} payment from ${h.name}`;
             if (!confirm(`Delete this ${h.type.toLowerCase()}?\n${label}\n\nThis will recalculate all balances.`)) return;
             try {
                 await apiFetch({ action: 'deleteTransaction', payload: { sheetName: h.sheetName, rowIndex: h.rowIndex } });
-                toast(`${h.type} deleted — balances rebuilt`, 'ok');
-                historyData.splice(i, 1);
-                renderHistory();
-                updateDashboard();
+                toast(`${h.type} deleted — balances rebuilt`, 'ok'); historyData.splice(i, 1); renderHistory(); updateDashboard();
             } catch (e) { toast('Failed: ' + e.message, 'er'); }
         }
 
         // ── ADMIN ─────────────────────────────────────────────────────────────────────
         function autoFillStudentName() {
-            const cls = document.getElementById('as-cls').value;
-            const id = document.getElementById('as-id').value.trim();
-            const nameInput = document.getElementById('as-name');
+            const cls = document.getElementById('as-cls').value; const id = document.getElementById('as-id').value.trim(); const nameInput = document.getElementById('as-name');
             if (!cls || !id) return;
             const s = students.find(s => s.className === cls && String(s.id).trim() === id);
             if (s) { nameInput.value = s.name; nameInput.style.borderColor = 'var(--green)'; nameInput.style.background = 'var(--green-bg)'; }
             else { nameInput.value = ''; nameInput.style.borderColor = ''; nameInput.style.background = ''; }
         }
-
         function adminTab(name, btn) {
             document.getElementById('admin-items').classList.toggle('hidden', name !== 'items');
             document.getElementById('admin-students').classList.toggle('hidden', name !== 'students');
-            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('on'));
-            btn.classList.add('on');
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('on')); btn.classList.add('on');
         }
-
         function renderAdminItems() {
-            const el = document.getElementById('admin-item-list');
-            document.getElementById('admin-item-count').textContent = items.length;
+            const el = document.getElementById('admin-item-list'); document.getElementById('admin-item-count').textContent = items.length;
             if (!items.length) { el.innerHTML = '<div style="color:var(--muted);font-size:.85rem">No items yet.</div>'; return; }
             el.innerHTML = items.map((it, i) => `<div class="admin-item-row"><span>${it.name}</span><span class="price-tag">₹${(+it.price).toFixed(2)}</span><button class="icon-btn" onclick="adminEditItem(${i})">✏️</button><button class="icon-btn del" onclick="adminDeleteItem(${i})">🗑</button></div>`).join('');
         }
-
         async function adminAddItem() {
-            const name = document.getElementById('ai-name').value.trim();
-            const price = parseFloat(document.getElementById('ai-price').value);
+            const name = document.getElementById('ai-name').value.trim(); const price = parseFloat(document.getElementById('ai-price').value);
             if (!name || isNaN(price) || price < 0) return toast('Enter valid name and price', 'er');
             try {
                 await apiFetch({ action: 'adminAddItem', payload: { name, price } });
-                items.push({ name, price });
-                document.getElementById('ai-name').value = '';
-                document.getElementById('ai-price').value = '';
-                renderAdminItems();
-                toast(`Item "${name}" added`, 'ok');
+                items.push({ name, price }); document.getElementById('ai-name').value = ''; document.getElementById('ai-price').value = '';
+                renderAdminItems(); toast(`Item "${name}" added`, 'ok');
             } catch (e) { toast('Failed: ' + e.message, 'er'); }
         }
-
         function adminEditItem(i) {
-            const it = items[i];
-            document.getElementById('ai-name').value = it.name;
-            document.getElementById('ai-price').value = it.price;
-            document.getElementById('ai-name').focus();
-            const btn = document.getElementById('btn-add-item');
-            const origText = btn.textContent, origClick = btn.onclick;
+            const it = items[i]; document.getElementById('ai-name').value = it.name; document.getElementById('ai-price').value = it.price; document.getElementById('ai-name').focus();
+            const btn = document.getElementById('btn-add-item'); const origText = btn.textContent, origClick = btn.onclick;
             btn.textContent = 'Update Item';
             btn.onclick = async () => {
-                const name = document.getElementById('ai-name').value.trim();
-                const price = parseFloat(document.getElementById('ai-price').value);
+                const name = document.getElementById('ai-name').value.trim(); const price = parseFloat(document.getElementById('ai-price').value);
                 if (!name || isNaN(price)) return toast('Enter valid data', 'er');
                 try {
-                    await apiFetch({ action: 'adminEditItem', payload: { index: i, name, price } });
-                    items[i] = { name, price };
-                    document.getElementById('ai-name').value = '';
-                    document.getElementById('ai-price').value = '';
-                    btn.textContent = origText; btn.onclick = origClick;
-                    renderAdminItems();
-                    toast('Item updated', 'ok');
+                    await apiFetch({ action: 'adminEditItem', payload: { index: i, name, price } }); items[i] = { name, price };
+                    document.getElementById('ai-name').value = ''; document.getElementById('ai-price').value = '';
+                    btn.textContent = origText; btn.onclick = origClick; renderAdminItems(); toast('Item updated', 'ok');
                 } catch (e) { toast('Failed: ' + e.message, 'er'); }
             };
         }
-
         async function adminDeleteItem(i) {
             if (!confirm(`Delete "${items[i].name}"?`)) return;
             try {
-                await apiFetch({ action: 'adminDeleteItem', payload: { index: i } });
-                items.splice(i, 1);
-                renderAdminItems();
-                toast('Item deleted', 'ok');
+                await apiFetch({ action: 'adminDeleteItem', payload: { index: i } }); items.splice(i, 1); renderAdminItems(); toast('Item deleted', 'ok');
             } catch (e) { toast('Failed: ' + e.message, 'er'); }
         }
-
         function renderAdminStudents() {
             const q = (document.getElementById('as-search').value || '').trim().toLowerCase();
             const all = q ? students.filter(s => s.name.toLowerCase().includes(q) || String(s.id).toLowerCase().includes(q)) : students;
@@ -2988,37 +3360,23 @@
             if (!all.length) { el.innerHTML = '<div style="color:var(--muted);font-size:.85rem;padding:.5rem">No students found.</div>'; return; }
             el.innerHTML = all.map(s => `<div class="admin-item-row" style="cursor:pointer" onclick="adminSelectStudent('${s.id}','${s.className}')"><span class="mono" style="font-size:.78rem;color:var(--muted);width:55px;flex-shrink:0">${s.id}</span><span>${s.name}</span><span class="price-tag" style="background:var(--green-bg);color:var(--green)">${s.className}</span></div>`).join('');
         }
-
         function adminSelectStudent(id, cls) {
-            document.getElementById('as-cls').value = cls;
-            document.getElementById('as-id').value = id;
-            autoFillStudentName();
-            document.getElementById('as-name').focus();
+            document.getElementById('as-cls').value = cls; document.getElementById('as-id').value = id; autoFillStudentName(); document.getElementById('as-name').focus();
         }
-
         async function adminSaveStudent() {
-            const id = document.getElementById('as-id').value.trim();
-            const name = document.getElementById('as-name').value.trim();
-            const cls = document.getElementById('as-cls').value;
+            const id = document.getElementById('as-id').value.trim(); const name = document.getElementById('as-name').value.trim(); const cls = document.getElementById('as-cls').value;
             if (!id || !name || !cls) return toast('Fill all fields', 'er');
-            const btn = document.querySelector('#admin-students .btn.bp');
-            const origText = btn.textContent;
+            const btn = document.querySelector('#admin-students .btn.bp'); const origText = btn.textContent;
             btn.textContent = 'Saving…'; btn.disabled = true;
             try {
                 await apiFetch({ action: 'adminSaveStudent', payload: { id, name, className: cls } });
                 const idx = students.findIndex(s => String(s.id) === id && s.className === cls);
-                if (idx >= 0) students[idx] = { id, name, className: cls };
-                else students.push({ id, name, className: cls });
-                renderAdminStudents();
-                document.getElementById('as-id').value = '';
-                document.getElementById('as-name').value = '';
-                document.getElementById('as-name').style.borderColor = '';
-                document.getElementById('as-name').style.background = '';
+                if (idx >= 0) students[idx] = { id, name, className: cls }; else students.push({ id, name, className: cls });
+                renderAdminStudents(); document.getElementById('as-id').value = ''; document.getElementById('as-name').value = ''; document.getElementById('as-name').style.borderColor = ''; document.getElementById('as-name').style.background = '';
                 toast(`Student ${name} saved`, 'ok');
             } catch (e) { toast('Failed: ' + e.message, 'er'); }
             finally { btn.textContent = origText; btn.disabled = false; }
         }
-
         async function adminDeleteStudent() {
             const id = document.getElementById('as-id').value.trim();
             if (!id) return toast('Select a student first', 'er');
@@ -3027,19 +3385,12 @@
                 await apiFetch({ action: 'adminDeleteStudent', payload: { id } });
                 const idx = students.findIndex(s => String(s.id) === id);
                 if (idx >= 0) students.splice(idx, 1);
-                renderAdminStudents();
-                document.getElementById('as-id').value = '';
-                document.getElementById('as-name').value = '';
-                document.getElementById('as-cls').value = '';
+                renderAdminStudents(); document.getElementById('as-id').value = ''; document.getElementById('as-name').value = ''; document.getElementById('as-cls').value = '';
                 toast('Student deleted', 'ok');
             } catch (e) { toast('Failed: ' + e.message, 'er'); }
         }
 
-        // Shake animation
-        const styleEl = document.createElement('style');
-        styleEl.textContent = `@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}`;
-        document.head.appendChild(styleEl);
-
+        document.head.appendChild(Object.assign(document.createElement('style'), { textContent: `@keyframes shake{0%,100%{transform:translateX(0)}20%,60%{transform:translateX(-8px)}40%,80%{transform:translateX(8px)}}` }));
         checkLogin();
     </script>
 </body>
